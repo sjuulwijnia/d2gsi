@@ -2,7 +2,13 @@
 The Dota 2 GameState Inspector is an application that listens to the GameState that Dota 2 can broadcast. It will display this information in a separate window and is thus best used in a dual-monitor setup.
 
 Some of the information that it *can* display:
-* 
+* Current hero you're playing
+* Health and mana values
+* Total, reliable and unreliable gold
+* Gold and experience per minute
+* Current location on the map
+
+And much more.
 
 ## Using the application
 ### From source
