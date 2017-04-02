@@ -1,0 +1,2 @@
+export const VIEW_CONTAINER_ITEM_HEIGHT = 160;
+export const VIEW_CONTAINER_ITEM_WIDTH = 240;

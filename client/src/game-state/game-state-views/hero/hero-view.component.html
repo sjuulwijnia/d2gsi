@@ -1,0 +1,28 @@
+<div class="value-wrapper-halves">
+	<p class="value-wrapper">
+		<span class="value">
+			<i class="d2mh" [ngClass]="name"></i> {{ nameVisual }}
+		</span>
+	</p>
+	<p class="value-wrapper --second">
+		<span class="value">
+			{{ level }}
+		</span>
+		<span class="label">
+			current level
+		</span>
+	</p>
+</div>
+
+<div class="value-wrapper --progress" style="margin-top: 2px;">
+	<span class="label">
+		HEALTH: {{ healthCurrent }} / {{ healthTotal }}
+	</span>
+	<md-progress-bar color="warn" [value]="healthPercentage"></md-progress-bar>
+</div>
+<div class="value-wrapper --progress" style="margin-top: 8px;">
+	<span class="label">
+		MANA: {{ manaCurrent }} / {{ manaTotal }}
+	</span>
+	<md-progress-bar color="primary" [value]="manaPercentage"></md-progress-bar>
+</div>

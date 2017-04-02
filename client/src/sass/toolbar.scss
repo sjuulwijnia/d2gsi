@@ -1,0 +1,79 @@
+.toolbar-spacer {
+	flex: 1 1 auto;
+}
+
+.app-body {
+	.mat-sidenav {
+		min-width: 200px;
+
+		.mat-list {
+			.mat-button {
+				border-radius: 0;
+				width: 100%;
+				height: 50px;
+
+				text-align: left;
+
+				.mat-icon {
+					margin-right: 16px;
+				}
+			}
+		}
+	}
+
+	.mat-toolbar,
+	.mat-toolbar-layout,
+	.mat-toolbar-row {
+		height: 56px;
+		min-height: 56px;
+		max-height: 56px;
+	}
+
+	.mat-toolbar {
+		-webkit-app-region: drag;
+		-webkit-user-select: none;
+
+		button {
+			-webkit-app-region: no-drag;
+
+			&[md-hamburger] {
+				margin-left: -16px;
+				margin-right: 16px;
+			}
+		}
+
+		.app-body-toolbar-buttons {
+			margin-top: -26px;
+			margin-right: -16px;
+
+			.mat-button {
+				padding: 0 6px;
+				line-height: $toolbar-height;
+				min-width: 1px;
+				color: #fff;
+			}
+		}
+	}
+
+	.app-body-toolbar {
+		background-color: $toolbar-color;
+		height: $toolbar-height;
+		width: 100%;
+		box-sizing: border-box;
+
+		-webkit-app-region: drag;
+		-webkit-user-select: none;
+
+		button {
+			-webkit-app-region: no-drag;
+		}
+
+		.app-body-toolbar-settings {
+			position: absolute;
+			bottom: 18px;
+			right: 18px;
+
+			z-index: 1000;
+		}
+	}
+}

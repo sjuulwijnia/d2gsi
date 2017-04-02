@@ -1,0 +1,39 @@
+<md-toolbar color="primary">
+	<button md-icon-button md-hamburger (click)="toolbarSidenav.toggle()">
+		<md-icon>menu</md-icon>
+	</button>
+
+	<span>
+		D2I
+	</span>
+
+	<span class="toolbar-spacer"></span>
+
+	<div class="app-body-toolbar-buttons">
+		<button md-button (click)="onMinimize()" style="margin-right: -5px">
+				<md-icon>remove</md-icon>
+			</button>
+		<button md-button (click)="onClose()">
+				<md-icon>clear</md-icon>
+			</button>
+	</div>
+</md-toolbar>
+
+<md-sidenav-container>
+	<md-sidenav #toolbarSidenav>
+		<md-list>
+			<button md-button (click)="onChangeLayout(); toolbarSidenav.close()">
+				<md-icon>view_quilt</md-icon>
+				Change layout
+			</button>
+		</md-list>
+		<md-list>
+			<button md-button (click)="onSettings(); toolbarSidenav.close()">
+				<md-icon>settings</md-icon>
+				Settings
+			</button>
+		</md-list>
+	</md-sidenav>
+
+	<ng-content></ng-content>
+</md-sidenav-container>

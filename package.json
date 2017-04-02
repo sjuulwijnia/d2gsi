@@ -1,0 +1,52 @@
+{
+	"name": "dota2-gsi",
+	"productName": "Dota 2 GameState Inspector",
+	"version": "1.0.0",
+	"description": "",
+	"main": "build/startup.js",
+	"keywords": [
+		"dota 2",
+		"dota2",
+		"gamestate"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"author": "Sjuul Wijnia",
+	"scripts": {
+		"***** BUILD *****": "",
+		"prebuild": "npm run build:client && npm run build:electron",
+		"build": "electron-packager . --out=dist --asar --overwrite --all",
+		"build:client": "cd ./client && npm run webpack && cd.. && gulp build:client",
+		"build:electron": "gulp build:electron",
+		"***** DEVELOP *****": "",
+		"dev:electron": "gulp develop:electron",
+		"dev:client": "npm run build:client && concurrently \"cd ./client && npm run webpack:watch\" \"npm start\"",
+		"***** INITIALIZE *****": "",
+		"initialize": "npm install && npm run prebuild",
+		"postinstall": "cd ./client && npm install && cd ..",
+		"***** START *****": "",
+		"start": "electron ."
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"concurrently": "^3.4.0",
+		"devtron": "^1.1.0",
+		"electron": "^1.0.1",
+		"electron-packager": "^8.0.0",
+		"gulp": "^3.9.1",
+		"gulp-plumber": "^1.1.0",
+		"gulp-watch": "^4.3.11",
+		"run-sequence": "^1.2.2",
+		"xo": "^0.16.0"
+	},
+	"xo": {
+		"esnext": true,
+		"envs": [
+			"node",
+			"browser"
+		]
+	}
+}

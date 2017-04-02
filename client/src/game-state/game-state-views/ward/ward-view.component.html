@@ -1,0 +1,16 @@
+<p class="value-wrapper">
+	<span class="value">
+		{{ available | yesNo }}
+	</span>
+	<span class="label">
+		available
+	</span>
+</p>
+<p class="value-wrapper" *ngIf="!available">
+	<span class="value">
+		{{ cooldown }}
+	</span>
+	<span class="label">
+		cooldown
+	</span>
+</p>

@@ -1,0 +1,9 @@
+<img *ngIf="hasItem" [src]="imageUrl" [title]="name">
+<div *ngIf="hasCooldown">
+	<cooldown [cooldown]="cooldown"></cooldown>
+</div>
+<div *ngIf="hasCharges">
+	<div class="charges">
+		{{ charges }}
+	</div>
+</div>

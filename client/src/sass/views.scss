@@ -1,0 +1,144 @@
+@import "_variables.scss";
+
+$position-view-icon-width: 32px;
+
+.position-view {
+	.minimap-container {
+		position: absolute;
+		bottom: 0;
+
+		margin-left: -16px;
+		margin-right: -16px;
+		margin-bottom: -16px;
+
+		width: $item-width;
+		height: $item-width;
+		
+		.minimap-icon {
+			.minimap-icon-background {
+				position: absolute;
+				top: -4px;
+				left: -4px;
+				height: $position-view-icon-width + 8;
+				width: $position-view-icon-width + 8;
+
+				background: gray;
+				opacity: 0.75;
+
+				z-index: 1005;
+				border-radius: ($position-view-icon-width + 8) / 2;
+			}
+
+			.d2mh-container {
+				position: absolute;
+				top: 0;
+
+				z-index: 1010
+			}
+
+			z-index: 1000;
+			position: absolute;
+
+			color: white;
+			font-weight: bold;
+
+			margin-left: -($position-view-icon-width / 2);
+			margin-top: -($position-view-icon-width / 2);
+			margin-bottom: 0;
+			margin-right: 0;
+			
+			width: $position-view-icon-width;
+			height: $position-view-icon-width;
+			text-align: center;
+		}
+
+		.minimap {
+			z-index: 995;
+
+			width: $item-width;
+			border-bottom-left-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+	}
+}
+
+$inventory-view-image-height: 58px;
+$inventory-view-image-width: 78px;
+$inventory-view-image-border-size: 3px;
+
+.inventory-view {
+	margin-left: -16px;
+	margin-right: -16px;
+	padding-bottom: 8px;
+
+	.inventory-view-label {
+		padding-left: 16px;
+		margin-top: 31px;
+		color: $text-muted;
+	}
+
+	.inventory-view-container {
+		color: white;
+
+		display: flex;
+		flex-flow: row nowrap;
+
+		justify-content: space-between;
+		align-content: space-around;
+		align-items: center;
+
+		&.--last {
+			inventory-view-item {
+				&:first-of-type {
+					border-bottom-left-radius: $inventory-view-image-border-size;
+				}
+				&:last-of-type {
+					border-bottom-right-radius: $inventory-view-image-border-size;
+				}
+
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+
+		inventory-view-item {
+			position: relative;
+			box-sizing: border-box;
+
+			width: $inventory-view-image-width;
+			height: $inventory-view-image-height;
+			margin-bottom: 3px;
+			background-color: black;
+
+			border: $inventory-view-image-border-size solid black;
+			border-radius: 6px;
+
+			&:first-of-type {
+				border-bottom-left-radius: 0;
+				border-top-left-radius: 0;
+			}
+
+			&:last-of-type {
+				border-bottom-right-radius: 0;
+				border-top-right-radius: 0;
+			}
+
+			img {
+				margin: 0 auto;
+
+				width: $inventory-view-image-width - ($inventory-view-image-border-size * 2);
+				height: $inventory-view-image-height - ($inventory-view-image-border-size * 2);
+			}
+
+			.charges {
+				position: absolute;
+				bottom: 2px;
+				right: 2px;
+
+				color: $text-white;
+				font-weight: bold;
+				text-shadow: $text-white-shadow;
+			}
+		}
+	}
+}

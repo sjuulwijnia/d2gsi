@@ -1,0 +1,21 @@
+<div class="view-container-item" [hidden]="isHidden">
+	<md-card>
+		<md-card-subtitle>
+			{{ configuration.label | uppercase }}
+			<span class="md-card-icon">
+				<md-icon>{{ configuration.icon }}</md-icon>
+			</span>
+		</md-card-subtitle>
+		<md-card-content [class.--row-size-2]="configuration.rowSize === 2" [class.--row-size-3]="configuration.rowSize === 3">
+			<div [hidden]="!hasContent">
+				<template #viewContainerItem></template>
+			</div>
+			<div *ngIf="!hasContent" class="view-container-item-error">
+				<p class="text-muted" style="text-align: center;">
+					<md-icon class="text-danger">error</md-icon>
+					<br/>Requires more data to display
+				</p>
+			</div>
+		</md-card-content>
+	</md-card>
+</div>

@@ -1,0 +1,1 @@
+export * from "./kill-list-view.component";

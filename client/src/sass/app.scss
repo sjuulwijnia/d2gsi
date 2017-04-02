@@ -1,0 +1,163 @@
+@import "~normalize.css/normalize.css";
+@import "~dota2-minimap-hero-sprites/assets/stylesheets/dota2minimapheroes.css";
+@import "~@angular/material/core/theming/prebuilt/deeppurple-amber.css";
+
+@import "./_variables.scss";
+
+.text-muted { color: $text-muted; }
+.text-warning { color: $text-warning; }
+.text-danger { color: $text-danger; }
+
+.app-body {
+	box-sizing: border-box;
+	width: 100%;
+	height: 100vh;
+
+	border-left: $app-border;
+	border-right: $app-border;
+	border-bottom: $app-border;
+
+	color: $text-normal;
+
+	.app-body-container {
+		padding: 5px 0 0;
+	}
+}
+
+.view-container-item {
+	.mat-card {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 16px;
+
+		.md-card-icon {
+			float: right;
+			margin-top: -4px;
+		}
+
+		.mat-card-content {
+			position: relative;
+			height: $item-height - 72px;
+
+			&.--row-size-2 {
+				height: ($item-height * 2) - 72px;
+			}
+			&.--row-size-3 {
+				height: ($item-height * 3) - 72px;
+			}
+			&.--row-size-4 {
+				height: ($item-height * 4) - 72px;
+			}
+
+			.view-container-item-error {
+				height: 100%;
+				display: flex;
+				flex-flow: row nowrap;
+				align-content: space-around;
+				justify-content: space-around;
+				align-items: center;
+
+				p {
+					color: $text-muted;
+					text-align: center;
+				}
+			}
+
+			.value-wrapper-halves {
+					height: 20px;
+
+					&.--full-height .value-wrapper {
+						margin-bottom: 14px;
+					}
+
+					.value-wrapper {
+						width: 50%;
+						float: left;
+						margin: 0px;
+
+						&.--second {
+							padding-left: 16px;
+						}
+					}
+
+					.d2mh {
+						margin-top: -6px;
+						margin-bottom: -6px;
+					}
+			}
+
+			.value-wrapper {
+				vertical-align: middle;
+				line-height: 20px;
+
+				box-sizing: border-box;
+
+				.value {
+					float: left;
+					font-size: 18px;
+				}
+
+				&.--progress {
+					height: 25px;
+
+					.label {
+						display: block;
+						text-align: center;
+						width: 100%;
+					}
+				}
+
+				.label {
+					float: left;
+					font-size: 14px;
+					color: $text-muted;
+
+					&::before {
+						display: inline-block;
+						content: ' ';
+					}
+				}
+
+				&::after {
+					display: inline-block;
+					content: ' ';
+				}
+			}
+		}
+	}
+}
+
+$gs-list-item-height: 42px;
+$gs-list-item-icon-padding: ($gs-list-item-height - 24px) / 2;
+$gs-list-item-value-width: $item-width - $gs-list-item-height - 16px;
+$gs-list-item-value-height: ($gs-list-item-height * 2) / 3;
+$gs-list-item-label-color: gray;
+$gs-list-item-label-height: $gs-list-item-height - $gs-list-item-value-height;
+
+.view-container-item {
+	.mat-list[dense][test] {
+		.mat-list-item {
+			.mat-list-item-content {
+				label {
+					vertical-align: middle;
+					line-height: 22px;
+					padding-top: 2px;
+
+					.value {
+						font-size: 18px;
+					}
+					.label {
+						float: right;
+						font-size: 13px;
+						color: $text-muted;
+					}
+				}
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+@import "./cooldown.scss";
+@import "./toolbar.scss";
+@import "./views.scss";

@@ -1,0 +1,22 @@
+$item-width: 240px;
+$item-height: 160px;
+
+$viewport-width: $item-width * 2;
+$viewport-height: $item-height * 4;
+
+$toolbar-color: #673ab7;
+$toolbar-height: 30px;
+
+$app-border: 8px solid $toolbar-color;
+
+$text-white: rgba(255, 255, 255, .87);
+$text-white-shadow:
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000;
+
+$text-normal: #292b2c;
+$text-muted: #636c72;
+$text-warning: #f0ad4e;
+$text-danger: #d9534f;

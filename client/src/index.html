@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>DOTA 2 GAMESTATE INSPECTOR</title>
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- required for the loading state -->
+	<style>
+		.app-loading {
+			font-size: 20px;
+			font-weight: 500;
+			font-family: Roboto, "Helvetica Neue", sans-serif;
+		}
+		
+		.app-loading .app-loading-toolbar {
+			color: rgba(255, 255, 255, .87);
+			padding-left: 56px;
+			box-sizing: border-box;
+			background-color: #673ab7;
+			height: 56px;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+		}
+		
+		.app-loading .app-loading-body {
+			color: #333;
+			margin-top: 128px;
+			width: 100%;
+			text-align: center;
+		}
+	</style>
+
+	<!-- required for access to Electron for Angular 2 -->
+	<script type="text/javascript">
+		window['electron'] = require('electron');
+	</script>
+</head>
+
+<body>
+	<div class="app-body">
+		<app>
+			<div class="app-loading">
+				<div class="app-loading-toolbar">
+					<span>
+						D2I
+					</span>
+				</div>
+				<div class="app-loading-body">
+					LOADING
+				</div>
+			</div>
+		</app>
+	</div>
+</body>
+
+
+</html>

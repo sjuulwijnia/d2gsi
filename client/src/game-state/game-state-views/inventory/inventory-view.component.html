@@ -1,0 +1,31 @@
+<div class="inventory-view">
+	<div class="inventory-view-container">
+		<inventory-view-item [item]="getItem('inventory', 0)" [index]="1"></inventory-view-item>
+		<inventory-view-item [item]="getItem('inventory', 1)" [index]="2"></inventory-view-item>
+		<inventory-view-item [item]="getItem('inventory', 2)" [index]="3"></inventory-view-item>
+	</div>
+	<div class="inventory-view-container">
+		<inventory-view-item [item]="getItem('inventory', 3)" [index]="4"></inventory-view-item>
+		<inventory-view-item [item]="getItem('inventory', 4)" [index]="5"></inventory-view-item>
+		<inventory-view-item [item]="getItem('inventory', 5)" [index]="6"></inventory-view-item>
+	</div>
+
+	<p class="inventory-view-label">BACKPACK</p>
+	<div class="inventory-view-container">
+		<inventory-view-item [item]="getItem('backpack', 0)" [index]="1"></inventory-view-item>
+		<inventory-view-item [item]="getItem('backpack', 1)" [index]="2"></inventory-view-item>
+		<inventory-view-item [item]="getItem('backpack', 2)" [index]="3"></inventory-view-item>
+	</div>
+
+	<p class="inventory-view-label">STASH</p>
+	<div class="inventory-view-container">
+		<inventory-view-item [item]="getItem('stash', 0)" [index]="1"></inventory-view-item>
+		<inventory-view-item [item]="getItem('stash', 1)" [index]="2"></inventory-view-item>
+		<inventory-view-item [item]="getItem('stash', 2)" [index]="3"></inventory-view-item>
+	</div>
+	<div class="inventory-view-container --last">
+		<inventory-view-item [item]="getItem('stash', 3)" [index]="4"></inventory-view-item>
+		<inventory-view-item [item]="getItem('stash', 4)" [index]="5"></inventory-view-item>
+		<inventory-view-item [item]="getItem('stash', 5)" [index]="6"></inventory-view-item>
+	</div>
+</div>

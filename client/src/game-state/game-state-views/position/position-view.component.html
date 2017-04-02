@@ -1,0 +1,21 @@
+<div class="position-view">
+	<p class="value-wrapper">
+		<span class="value">
+			<!--{{ mapNameVisual }}-->
+			{{ heroName }}
+		</span>
+		<span class="label">
+			map
+		</span>
+	</p>
+
+	<div class="minimap-container">
+		<div class="minimap-icon" [style.top.%]="topPercentage" [style.left.%]="leftPercentage">
+			<div class="d2mh-container">
+				<i class="d2mh" [ngClass]="heroName"></i>
+			</div>
+			<div class="minimap-icon-background"></div>
+		</div>
+		<img class="minimap" src="../../../images/dota2-minimap.png" />
+	</div>
+</div>

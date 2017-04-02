@@ -1,0 +1,49 @@
+@import "_variables.scss";
+
+.cooldown {
+	position: absolute;
+
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	.cooldown-background {
+		position: absolute;
+
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		z-index: 1000;
+		background-color: black;
+		opacity: 0.5;
+	}
+
+	.cooldown-label {
+		position: absolute;
+
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		z-index: 1005;
+
+		display: flex;
+		flex-flow: row nowrap;
+
+		justify-content: space-around;
+		align-content: space-around;
+		align-items: center;
+
+		height: 100%;
+
+		span {
+			color: $text-white;
+			font-weight: bold;
+			text-shadow: $text-white-shadow;
+		}
+	}
+}

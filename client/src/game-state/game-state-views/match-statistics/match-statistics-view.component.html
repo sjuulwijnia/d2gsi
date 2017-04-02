@@ -1,0 +1,24 @@
+<p class="value-wrapper" *ngIf="mapName !== 'Demo Map'">
+	<span class="value">
+		{{ matchId }}
+	</span>
+	<span class="label">
+		match ID
+	</span>
+</p>
+<p class="value-wrapper" *ngIf="inProgress">
+	<span class="value">
+		{{ time }}
+	</span>
+	<span class="label">
+		time
+	</span>
+</p>
+<p class="value-wrapper" *ngIf="!inProgress">
+	<span class="value">
+		{{ gameState }}
+	</span>
+	<span class="label">
+		state
+	</span>
+</p>

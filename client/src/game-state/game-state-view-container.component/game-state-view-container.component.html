@@ -1,0 +1,7 @@
+<div *ngIf="isGameInProgress">
+	<md-grid-list [cols]="columnCount" gutterSize="0" [rowHeight]="rowHeight">
+		<md-grid-tile *ngFor="let view of views" [colspan]="view.columnSize" [rowspan]="view.rowSize">
+			<game-state-view-container-item [configuration]="view"></game-state-view-container-item>
+		</md-grid-tile>
+	</md-grid-list>
+</div>
