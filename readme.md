@@ -18,8 +18,16 @@ To use the application from source, complete the following steps:
 * Run ``npm run initialize`` to download the correct dependencies and create the right folders
 * Run ``npm start`` to start the application
 
-### Initializing
-To initialize this app, just run ``npm run initialize``. It will then download the correct depedencies and create the right folders.
+#### Initializing D2GSI
+To initialize D2GSI, just run ``npm run initialize``. It will then download the correct dependencies and create the right folders for it to function.
 
-### Starting
-To start the app, simply run ``npm start``. Make sure to have initialized it, though.
+### Configuring Dota 2
+However, Dota 2 currently won't be automagically be configured to work, so in order to use D2GSI in it's current state, you need to copy the `gamestate_integration_d2gsi.cfg` file inside the following Dota 2 folder:
+```
+<path to dota 2>/game/dota/cfg/gamestate_integration/
+```
+
+If either the ``cfg`` or ``gamestate_integration`` folder doesn't exist, feel free to create them.
+
+#### Starting
+To start the app, simply run ``npm start``. Make sure to have initialized and configured it first, though. Once that is done, test that it is working by starting a demo match. If values start to show up, it's working.
